@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css';
 
 
 const Navbar = () => {
+
+    const [menu, setMenu] = useState("home")
+
   return (
     <div className='navbar'>
       <div className='navbar-left'>
@@ -10,12 +13,12 @@ const Navbar = () => {
       </div>
       <div className='navbar-middle'>
         <ul className="navbar-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">mobile-app</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Contact</a></li>
+            <li onClick={()=>setMenu("home")} className={menu==="home"?"active":""}><a href="#">Home</a></li>
+            <li onClick={()=>setMenu("about")} className={menu==="about"?"active":""}><a href="#">About</a></li>
+            <li onClick={()=>setMenu("mobile-app")} className={menu==="mobile-app"?"active":""}><a href="#">mobile-app</a></li>
+            <li onClick={()=>setMenu("features")} className={menu==="features"?"active":""}><a href="#">Features</a></li>
+            <li onClick={()=>setMenu("team")} className={menu==="team"?"active":""}><a href="#">Team</a></li>
+            <li onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}><a href="#">Contact-Us</a></li>
         </ul>
       </div>
       <div className="navbar-right">

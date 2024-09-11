@@ -5,6 +5,9 @@
     align-items: center;
 }
 
+.navbar-left{
+    color: blue;
+}
 .navbar-menu{
     display: flex;
     list-style: none;
@@ -14,4 +17,27 @@
 }
 
 
-.
+.navbar button{
+    background-color: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid blue;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover{
+    background-color: rgb(194, 194, 232);
+}
+
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+
+}
+
+.navbar li{
+    cursor: pointer;
+}
